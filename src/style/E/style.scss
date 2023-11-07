@@ -1,0 +1,79 @@
+.E-container {
+  .modal {
+    width: 35%;
+    top: 20%;
+    right: 30%;
+    position: fixed;
+    z-index: 8;
+    .modal-content {
+      span {
+        padding: 0 8px;
+        font-size: 2.5rem;
+        position: absolute;
+        z-index: 10;
+        right: 0.1px;
+        cursor: pointer;
+        &:hover {
+          background-color: rgba(255, 0, 0, 0.5);
+          color: white;
+        }
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .E-mainPart {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+    table,
+    tr,
+    td,
+    th {
+      border: 2px solid black;
+      font-size: 1.5rem;
+      .imgContainer {
+        width: 8%;
+        img {
+          width: 100%;
+          position: relative;
+          cursor: pointer;
+        }
+      }
+    }
+
+    table {
+      width: 90%;
+      thead {
+        background-color: rgba(9, 147, 43, 0.5);
+        th {
+          font-size: 1.75rem;
+          padding: 0.5rem;
+        }
+      }
+      tbody {
+        .td-name,
+        .td-desc,
+        .td-rent {
+          padding: 0.75rem;
+          line-height: 35px;
+        }
+
+        .td-name {
+          width: 15%;
+          text-align: center;
+          font-size: 2rem;
+        }
+        .td-desc {
+          width: 30%;
+        }
+        .td-rent {
+          width: 15%;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

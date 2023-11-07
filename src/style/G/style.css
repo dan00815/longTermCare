@@ -1,0 +1,73 @@
+.G-container .G-mainPart {
+  margin: 2rem;
+}
+.G-container .G-mainPart .G-service {
+  font-size: 2rem;
+}
+.G-container .G-mainPart .G-service .serviceContent {
+  display: flex;
+  padding: 2rem;
+}
+.G-container .G-mainPart .G-service .serviceContent i {
+  position: relative;
+  top: 7px;
+}
+.G-container .G-mainPart .G-service .serviceContent p {
+  padding-left: 0.75rem;
+}
+.G-container .G-mainPart .G-service .serviceContent p strong {
+  background-color: rgba(124, 104, 238, 0.3);
+  border-radius: 10px;
+  padding: 5px;
+}
+.G-container div.homeCare {
+  padding: 3rem 0;
+  text-align: center;
+}
+.G-container div.homeCare button {
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 15px;
+  background-color: lightskyblue;
+  transition: all ease 0.3s;
+}
+.G-container div.homeCare button:hover {
+  background-color: rgb(39, 167, 246);
+}
+.G-container div.homeCare main .title-container {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.G-container div.homeCare main .title-container .title-word {
+  width: 100%;
+  border-top: 5px solid rgba(128, 128, 128, 0.5);
+  border-bottom: 5px solid rgba(128, 128, 128, 0.5);
+}
+.G-container div.homeCare main .title-container .title-description {
+  width: 90%;
+}
+.G-container div.homeCare main .homeCare-service {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+.G-container div.homeCare main .homeCare-service div {
+  font-size: 2.25rem;
+  width: 30%;
+  padding: 1.5rem;
+  margin: 1rem;
+  border: 3px solid rgba(124, 104, 238, 0.8);
+  border-radius: 40px;
+  transition: all ease 0.8s;
+}
+.G-container div.homeCare main .homeCare-service div:hover {
+  background-color: rgba(124, 104, 238, 0.3);
+  border: none;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: bold;
+}/*# sourceMappingURL=style.css.map */

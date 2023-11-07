@@ -1,0 +1,446 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: arial, "Microsoft JhengHei", sans-serif;
+}
+
+nav {
+  z-index: 99;
+  background-color: rgb(250, 235, 215);
+  padding: 0.5rem;
+  display: flex;
+  position: sticky;
+  top: 0px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+}
+nav .imgContainer {
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex: 1 1 250px;
+}
+nav .imgContainer img {
+  width: 15%;
+  margin-left: 3rem;
+}
+nav .imgContainer .hometitle {
+  font-size: 2.25rem;
+  margin-left: 1.5rem;
+}
+nav .nav-ul {
+  flex: 3 1 200px;
+  justify-content: end;
+  align-items: center;
+  display: flex;
+  list-style-type: none;
+}
+nav .nav-ul li {
+  font-size: 1.5rem;
+  margin: 1.25rem;
+}
+nav .nav-ul li a {
+  text-decoration: none;
+  color: black;
+  padding-bottom: 1px;
+  transition: all ease 0.5s;
+}
+nav .nav-ul li a:hover {
+  color: rgb(6, 178, 236);
+  border-bottom: 3px solid rgb(6, 178, 236);
+}
+nav .nav-ul .BC {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+nav .nav-ul .BC:hover > .BC-tab {
+  display: block;
+  animation: navTab 0.8s ease forwards;
+}
+nav .nav-ul .BC .BC-tab {
+  list-style-type: none;
+  position: absolute;
+  display: none;
+  text-align: center;
+  background-color: rgba(250, 235, 215, 0.9);
+  border: 3px solid rgba(255, 255, 255, 0.306);
+  border-top: none;
+}
+nav .nav-ul .EF {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+nav .nav-ul .EF:hover > .EF-tab {
+  display: block;
+  animation: navTab 0.8s ease forwards;
+}
+nav .nav-ul .EF .EF-tab {
+  list-style-type: none;
+  position: absolute;
+  display: none;
+  text-align: center;
+  background-color: rgba(250, 235, 215, 0.9);
+  border: 3px solid rgba(255, 255, 255, 0.306);
+  border-top: none;
+}
+
+.footer {
+  background-color: rgba(250, 235, 215, 0.475);
+  border-top: rgba(250, 235, 215, 0.2) 2px solid;
+}
+.footer .contactInfo .main-info {
+  font-size: 1.25rem;
+  margin: 1rem 1rem 0.5rem 1.5rem;
+}
+.footer .contactInfo .mail-info,
+.footer .contactInfo .phone-info {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.25rem;
+  margin: 0.5rem 1rem 0.5rem 1.5rem;
+}
+.footer .contactInfo .mail-info p,
+.footer .contactInfo .phone-info p {
+  padding-left: 10px;
+}
+.footer .text-info {
+  font-size: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.footer .imageContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  scroll-behavior: smooth;
+}
+.footer .imageContainer div {
+  width: 50px;
+  height: 50px;
+  margin: 0.5rem;
+}
+.footer .imageContainer div img {
+  width: 100%;
+}
+
+.slide {
+  height: 80vh;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all ease 0.5s;
+}
+.slide button {
+  cursor: pointer;
+  border: none;
+  margin: 1.5rem;
+  width: 50px;
+  height: 70px;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(248, 235, 3, 0.925);
+  z-index: 15;
+}
+.slide img {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 80vh;
+}
+
+.QA-section {
+  margin: 3rem 0;
+}
+.QA-section .whatIs1 {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 3rem;
+}
+.QA-section .whatIs1 .whatIs1-que,
+.QA-section .whatIs1 .whatIs1-ans {
+  border-radius: 20px;
+  font-weight: bold;
+  color: white;
+  width: 30rem;
+  height: 20rem;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-size: 2rem;
+  margin: 2rem;
+}
+.QA-section .whatIs1 .whatIs1-que {
+  background-color: rgba(220, 199, 13, 0.832);
+}
+.QA-section .whatIs1 .whatIs1-ans {
+  cursor: pointer;
+  background-color: rgba(4, 21, 178, 0.842);
+}
+.QA-section .whatIs1 .whatIs1-ans:hover {
+  transition: all ease 2s;
+  transform: rotateY(360deg);
+}
+.QA-section .whatIs1 .whatIs1-ans:hover .ans-filter {
+  display: block;
+}
+.QA-section .whatIs1 .whatIs1-ans:hover .re-ans-filter {
+  display: none;
+}
+.QA-section .whatIs1 .whatIs1-ans .ans-filter {
+  font-size: 1.5rem;
+  padding: 0.8rem;
+  display: none;
+}
+.QA-section .whatIs2 {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0rem 3rem;
+}
+.QA-section .whatIs2 .whatIs2-que,
+.QA-section .whatIs2 .whatIs2-ans {
+  border-radius: 20px;
+  font-weight: bold;
+  color: white;
+  width: 30rem;
+  height: 20rem;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-size: 2rem;
+  margin: 2rem;
+}
+.QA-section .whatIs2 .whatIs2-que {
+  background-color: rgba(220, 199, 13, 0.832);
+}
+.QA-section .whatIs2 .whatIs2-ans {
+  cursor: pointer;
+  background-color: rgba(4, 21, 178, 0.842);
+}
+.QA-section .whatIs2 .whatIs2-ans:hover {
+  transition: all ease 2s;
+  transform: rotateY(360deg);
+}
+.QA-section .whatIs2 .whatIs2-ans:hover .ans-filter {
+  display: block;
+}
+.QA-section .whatIs2 .whatIs2-ans:hover .re-ans-filter {
+  display: none;
+}
+.QA-section .whatIs2 .whatIs2-ans .ans-filter {
+  font-size: 1.5rem;
+  padding: 0.8rem;
+  display: none;
+}
+
+.four-service {
+  background-color: rgba(110, 255, 212, 0.3);
+  box-shadow: 10px 5px 10px 3px rgba(0, 0, 0, 0.4);
+  overflow-x: hidden;
+}
+.four-service h1 {
+  font-size: 3rem;
+  margin: 2.5rem;
+}
+.four-service div,
+.four-service article,
+.four-service p {
+  display: flex;
+  margin: 2rem 3rem;
+  width: 70vw;
+  transition: transform ease 0.8s;
+  transform: translateX(-200%);
+}
+.four-service div i,
+.four-service article i,
+.four-service p i {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+}
+.four-service div h2,
+.four-service article h2,
+.four-service p h2 {
+  font-weight: normal;
+  font-size: 2rem;
+  margin-left: 1rem;
+}
+.four-service :nth-of-type(even) {
+  transform: translateX(200%);
+}
+.four-service p {
+  font-size: 1.5rem;
+  margin-left: 6.5rem;
+  line-height: 3.5rem;
+}
+.four-service .show {
+  transform: translateX(15%);
+}
+
+.identity-partial {
+  height: 100vh;
+  overflow-x: hidden;
+}
+.identity-partial img {
+  width: 100%;
+  height: 100vh;
+  opacity: 0.5;
+  z-index: -5;
+  position: absolute;
+}
+.identity-partial div.filter {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(128, 128, 128, 0.6);
+  position: absolute;
+  z-index: -3;
+}
+.identity-partial h1 {
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+  font-size: 3rem;
+  color: rgb(255, 255, 255);
+  transform-origin: bottom;
+  animation: swingEffect 6s infinite alternate 0.5s ease-in-out;
+}
+.identity-partial div.identity-mini {
+  display: flex;
+  justify-content: space-around;
+}
+.identity-partial div.identity-mini .identity-mini-card {
+  position: relative;
+  top: 14rem;
+  z-index: 1;
+  background-color: rgba(255, 200, 0, 0.7);
+  box-shadow: 10px 5px 10px 3px rgba(0, 0, 0, 0.4);
+  padding: 3px;
+  height: 12rem;
+  width: 13rem;
+  text-align: center;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all ease 1s;
+}
+.identity-partial div.identity {
+  position: relative;
+  top: 1rem;
+  z-index: 5;
+  display: flex;
+  justify-content: space-around;
+}
+.identity-partial div.identity .identity-card {
+  box-shadow: 10px 5px 10px 3px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  line-height: 18rem;
+  background-color: rgb(205, 133, 63);
+  height: 18rem;
+  width: 15rem;
+  border-radius: 10px 10px 100px 100px;
+}
+.identity-partial div.identity .identity-card p {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 8px;
+}
+
+.apply {
+  background-color: rgba(110, 255, 212, 0.3);
+  box-shadow: 5px -5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+.apply h1 {
+  text-align: center;
+  font-size: 3rem;
+  padding: 2rem;
+}
+.apply div.flowChart {
+  padding-bottom: 2rem;
+  transform: translateY(120%);
+  display: flex;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+.apply div.flowChart div.chart-elm {
+  width: 15vw;
+}
+.apply div.flowChart div.chart-elm p {
+  font-size: 1.5rem;
+}
+.apply div.flowChart span {
+  transform: translateY(40px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.apply div.flowChart span p {
+  line-height: 1.75rem;
+}
+.apply div.flowChart span i {
+  color: rgb(255, 0, 0);
+  font-size: 3.5rem;
+}
+.apply p {
+  text-align: center;
+  font-size: 1.25rem;
+  padding: 5px 0;
+}
+.apply img {
+  width: 100%;
+}
+
+#ToTop {
+  border: 1px solid black;
+  width: 35px;
+  height: 45px;
+  position: fixed;
+  z-index: 10;
+  right: 20px;
+  bottom: 20px;
+  background-color: rgb(219, 151, 34);
+}
+#ToTop a {
+  text-decoration: none;
+}
+#ToTop i {
+  color: white;
+  font-size: 1.8rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.fade {
+  display: none;
+}
+
+@keyframes navTab {
+  from {
+    top: 60px;
+  }
+  to {
+    top: 65px;
+  }
+}
+@keyframes swingEffect {
+  from {
+    transform: skewX(10deg);
+  }
+  to {
+    transform: skewX(-15deg);
+  }
+}/*# sourceMappingURL=style.css.map */

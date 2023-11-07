@@ -1,0 +1,76 @@
+.E-container .modal {
+  width: 35%;
+  top: 20%;
+  right: 30%;
+  position: fixed;
+  z-index: 8;
+}
+.E-container .modal .modal-content span {
+  padding: 0 8px;
+  font-size: 2.5rem;
+  position: absolute;
+  z-index: 10;
+  right: 0.1px;
+  cursor: pointer;
+}
+.E-container .modal .modal-content span:hover {
+  background-color: rgba(255, 0, 0, 0.5);
+  color: white;
+}
+.E-container .modal .modal-content img {
+  width: 100%;
+}
+.E-container .E-mainPart {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+}
+.E-container .E-mainPart table,
+.E-container .E-mainPart tr,
+.E-container .E-mainPart td,
+.E-container .E-mainPart th {
+  border: 2px solid black;
+  font-size: 1.5rem;
+}
+.E-container .E-mainPart table .imgContainer,
+.E-container .E-mainPart tr .imgContainer,
+.E-container .E-mainPart td .imgContainer,
+.E-container .E-mainPart th .imgContainer {
+  width: 8%;
+}
+.E-container .E-mainPart table .imgContainer img,
+.E-container .E-mainPart tr .imgContainer img,
+.E-container .E-mainPart td .imgContainer img,
+.E-container .E-mainPart th .imgContainer img {
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+}
+.E-container .E-mainPart table {
+  width: 90%;
+}
+.E-container .E-mainPart table thead {
+  background-color: rgba(9, 147, 43, 0.5);
+}
+.E-container .E-mainPart table thead th {
+  font-size: 1.75rem;
+  padding: 0.5rem;
+}
+.E-container .E-mainPart table tbody .td-name,
+.E-container .E-mainPart table tbody .td-desc,
+.E-container .E-mainPart table tbody .td-rent {
+  padding: 0.75rem;
+  line-height: 35px;
+}
+.E-container .E-mainPart table tbody .td-name {
+  width: 15%;
+  text-align: center;
+  font-size: 2rem;
+}
+.E-container .E-mainPart table tbody .td-desc {
+  width: 30%;
+}
+.E-container .E-mainPart table tbody .td-rent {
+  width: 15%;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,40 @@
+.D-container {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-color: rgba(128, 128, 128, 0.1);
+  box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.1);
+}
+.D-container .D-mainPart {
+  display: flex;
+  justify-content: center;
+}
+.D-container .D-mainPart .imgContainer {
+  margin: 2rem;
+  width: 50%;
+  height: 30%;
+}
+.D-container .D-mainPart .imgContainer img {
+  width: 100%;
+}
+.D-container .D-mainPart .show {
+  animation: remove ease 0.6s forwards;
+}
+.D-container .D-mainPart .D-part-Description p {
+  font-weight: bold;
+  font-size: 2.5rem;
+  padding: 1.5rem;
+  color: brown;
+}
+
+@keyframes remove {
+  0% {
+    transform: translateX(-400%);
+  }
+  66% {
+    transform: translateX(100%);
+    transform: skewX(-20deg);
+  }
+  100% {
+    transform: skewX(1deg);
+  }
+}/*# sourceMappingURL=style.css.map */

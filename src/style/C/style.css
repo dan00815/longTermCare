@@ -1,0 +1,85 @@
+.title-container {
+  margin: 2.5rem;
+  margin-bottom: 0;
+}
+
+.title-word {
+  color: darkblue;
+  font-size: 3rem;
+}
+
+.title-description {
+  font-size: 1.5rem;
+  padding: 15px;
+  line-height: 2rem;
+}
+
+.odd {
+  flex-direction: row;
+}
+.odd .code-part {
+  position: relative;
+  z-index: 5;
+  left: 5rem;
+}
+.odd .code-part p {
+  padding: 1rem;
+  padding-right: 8rem;
+}
+.odd .execute-part {
+  position: relative;
+  z-index: 3;
+  padding: 1.25rem;
+  padding-left: 6rem;
+}
+
+.even {
+  flex-direction: row-reverse;
+}
+.even .code-part p {
+  position: relative;
+  z-index: 5;
+  padding: 1rem;
+  padding-left: 8rem;
+}
+.even .execute-part {
+  position: relative;
+  z-index: 3;
+  left: 5rem;
+  padding: 1.25rem;
+  padding-right: 6rem;
+}
+
+div.C-container {
+  overflow-x: hidden;
+  background-color: rgba(128, 128, 128, 0.1);
+  box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.2);
+}
+div.C-container main.C-mainPart .C-div-part {
+  display: flex;
+  justify-content: center;
+  margin: 5rem;
+}
+div.C-container main.C-mainPart .C-div-part .code-part {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.C-container main.C-mainPart .C-div-part .code-part p {
+  width: 28vw;
+  font-size: 2rem;
+  text-align: center;
+  background-color: rgba(255, 240, 0, 0.3);
+}
+div.C-container main.C-mainPart .C-div-part .execute-part {
+  color: white;
+  line-height: 3rem;
+  text-align: center;
+  background-color: rgba(255, 149, 0, 0.8);
+  width: 50vw;
+  font-size: 1.75rem;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=style.css.map */

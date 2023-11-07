@@ -1,0 +1,154 @@
+.B-container {
+  display: flex;
+  justify-content: center;
+  margin: 3rem;
+  .B-title {
+    margin: 3rem;
+    flex: 0.5 1 300px;
+    h1 {
+      position: relative;
+      bottom: 40px;
+      right: 40px;
+      font-size: 3rem;
+      color: darkblue;
+    }
+    div.B-description {
+      font-size: 1.25rem;
+      padding: 8px;
+      position: relative;
+      bottom: 20px;
+      right: 40px;
+      line-height: 2rem;
+    }
+    .img-container {
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  //此處設定B-cpmponent的table
+  table,
+  tr,
+  td,
+  th {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 0.5rem;
+    flex: 1 1 300px;
+  }
+
+  th {
+    background-color: rgba(85, 153, 255, 0.5);
+    font-size: 1.25rem;
+  }
+  td {
+    font-size: 1.05rem;
+  }
+
+  a {
+    color: darkred;
+    text-decoration: none;
+    &:hover {
+      padding-bottom: 3px;
+      border-bottom: 2px solid red;
+    }
+  }
+}
+
+//B的各別分頁
+div.BA-profile-container {
+  // height: 100vh;
+  margin-bottom: 5rem;
+  h1 {
+    font-size: 3rem;
+    margin: 3rem;
+  }
+  div.BA-profile {
+    display: flex;
+    justify-content: center;
+    div.B-NavBar {
+      margin: 3rem;
+      flex: 1 1 20px;
+      display: flex;
+      flex-direction: column;
+      border-bottom: none;
+      div {
+        font-size: 1.5rem;
+        font-weight: bold;
+        background-color: rgb(255, 165, 0, 0.8);
+        text-align: center;
+        padding: 10px;
+        border-bottom: 1px solid grey;
+      }
+      button {
+        padding: 5px;
+        background-color: rgba(173, 216, 230, 0.8);
+        border-top: 0;
+        border-bottom: 1px solid grey;
+        border-right: 1px solid grey;
+        border-left: 1px solid grey;
+        &:hover {
+          background-color: rgb(85, 187, 221, 0.8);
+          > a {
+            color: white;
+          }
+        }
+        a {
+          font-size: 1.25rem;
+          color: black;
+          text-decoration: none;
+        }
+      }
+      img {
+        width: 100%;
+      }
+    }
+
+    table.BA-profile-table {
+      border-collapse: collapse;
+      margin-right: 3rem;
+      flex: 3 1 150px;
+      .profile-title {
+        width: 150px;
+        height: 60px;
+        font-weight: bold;
+      }
+      .profile-description-title {
+        font-weight: bold;
+        height: 60px;
+        text-align: center;
+      }
+      .profile-description {
+        vertical-align: top;
+        line-height: 4rem;
+      }
+      tr,
+      td {
+        animation: tableBorderEffect 10s infinite ease;
+        transition: animation 1s;
+        padding: 10px;
+        font-size: 1.75rem;
+      }
+    }
+  }
+}
+
+@keyframes tableBorderEffect {
+  0% {
+    border: 2px solid red;
+  }
+  25% {
+    border: 2px solid yellow;
+  }
+  50% {
+    border: 2px solid green;
+  }
+  75% {
+    border: 2px solid blue;
+  }
+  100% {
+    border: 2px solid purple;
+  }
+}

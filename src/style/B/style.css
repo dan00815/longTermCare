@@ -1,0 +1,145 @@
+.B-container {
+  display: flex;
+  justify-content: center;
+  margin: 3rem;
+}
+.B-container .B-title {
+  margin: 3rem;
+  flex: 0.5 1 300px;
+}
+.B-container .B-title h1 {
+  position: relative;
+  bottom: 40px;
+  right: 40px;
+  font-size: 3rem;
+  color: darkblue;
+}
+.B-container .B-title div.B-description {
+  font-size: 1.25rem;
+  padding: 8px;
+  position: relative;
+  bottom: 20px;
+  right: 40px;
+  line-height: 2rem;
+}
+.B-container .B-title .img-container img {
+  width: 100%;
+}
+.B-container table,
+.B-container tr,
+.B-container td,
+.B-container th {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+  padding: 0.5rem;
+  flex: 1 1 300px;
+}
+.B-container th {
+  background-color: rgba(85, 153, 255, 0.5);
+  font-size: 1.25rem;
+}
+.B-container td {
+  font-size: 1.05rem;
+}
+.B-container a {
+  color: darkred;
+  text-decoration: none;
+}
+.B-container a:hover {
+  padding-bottom: 3px;
+  border-bottom: 2px solid red;
+}
+
+div.BA-profile-container {
+  margin-bottom: 5rem;
+}
+div.BA-profile-container h1 {
+  font-size: 3rem;
+  margin: 3rem;
+}
+div.BA-profile-container div.BA-profile {
+  display: flex;
+  justify-content: center;
+}
+div.BA-profile-container div.BA-profile div.B-NavBar {
+  margin: 3rem;
+  flex: 1 1 20px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: none;
+}
+div.BA-profile-container div.BA-profile div.B-NavBar div {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: rgba(255, 165, 0, 0.8);
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid grey;
+}
+div.BA-profile-container div.BA-profile div.B-NavBar button {
+  padding: 5px;
+  background-color: rgba(173, 216, 230, 0.8);
+  border-top: 0;
+  border-bottom: 1px solid grey;
+  border-right: 1px solid grey;
+  border-left: 1px solid grey;
+}
+div.BA-profile-container div.BA-profile div.B-NavBar button:hover {
+  background-color: rgba(85, 187, 221, 0.8);
+}
+div.BA-profile-container div.BA-profile div.B-NavBar button:hover > a {
+  color: white;
+}
+div.BA-profile-container div.BA-profile div.B-NavBar button a {
+  font-size: 1.25rem;
+  color: black;
+  text-decoration: none;
+}
+div.BA-profile-container div.BA-profile div.B-NavBar img {
+  width: 100%;
+}
+div.BA-profile-container div.BA-profile table.BA-profile-table {
+  border-collapse: collapse;
+  margin-right: 3rem;
+  flex: 3 1 150px;
+}
+div.BA-profile-container div.BA-profile table.BA-profile-table .profile-title {
+  width: 150px;
+  height: 60px;
+  font-weight: bold;
+}
+div.BA-profile-container div.BA-profile table.BA-profile-table .profile-description-title {
+  font-weight: bold;
+  height: 60px;
+  text-align: center;
+}
+div.BA-profile-container div.BA-profile table.BA-profile-table .profile-description {
+  vertical-align: top;
+  line-height: 4rem;
+}
+div.BA-profile-container div.BA-profile table.BA-profile-table tr,
+div.BA-profile-container div.BA-profile table.BA-profile-table td {
+  animation: tableBorderEffect 10s infinite ease;
+  transition: animation 1s;
+  padding: 10px;
+  font-size: 1.75rem;
+}
+
+@keyframes tableBorderEffect {
+  0% {
+    border: 2px solid red;
+  }
+  25% {
+    border: 2px solid yellow;
+  }
+  50% {
+    border: 2px solid green;
+  }
+  75% {
+    border: 2px solid blue;
+  }
+  100% {
+    border: 2px solid purple;
+  }
+}/*# sourceMappingURL=style.css.map */
