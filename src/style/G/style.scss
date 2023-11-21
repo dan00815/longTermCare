@@ -1,29 +1,45 @@
 .G-container {
-  .G-mainPart {
-    margin: 2rem;
-    .G-service {
-      font-size: 2rem;
-      .serviceContent {
-        display: flex;
-        padding: 2rem;
-        i {
-          position: relative;
-          top: 7px;
-        }
-        p {
-          padding-left: 0.75rem;
-          strong {
-            background-color: rgba(124, 104, 238, 0.3);
-            border-radius: 10px;
-            padding: 5px;
-          }
-        }
+  main.G-mainPart {
+    display: flex;
+    justify-content: center;
+    div.imgContainer {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 1.5rem 2rem 1rem 2rem;
+      img {
+        width: 80%;
+        height: 50vh;
+        border-radius: 50%;
+      }
+      .G-desc {
+        text-align: center;
+        color: rgb(4, 108, 236);
+        font-weight: bold;
+        position: absolute;
+        font-size: 2rem;
+        padding-top: 5rem;
+        width: 60%;
+        border-radius: 50%;
+      }
+      .ga-1 {
+        padding-top: 6rem;
+      }
+      p {
+        cursor: pointer;
+        background-color: rgb(201, 225, 18, 0.5);
+        border-radius: 20px;
+        font-weight: bold;
+        padding: 0.5rem;
+        font-size: 1.75rem;
+        margin-top: 1rem;
       }
     }
   }
 
   div.homeCare {
-    padding: 3rem 0;
+    padding: 5rem 0 3rem 0;
     text-align: center;
     button {
       cursor: pointer;
@@ -72,6 +88,163 @@
             border: none;
             color: rgba(0, 0, 0, 0.6);
             font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .G-container {
+    main.G-mainPart {
+      div.imgContainer {
+        margin: 1.5rem 2rem 1rem 2rem;
+        img {
+          width: 80%;
+          height: 30vh;
+        }
+        .G-desc {
+          font-size: 1.5rem;
+          padding-top: 3rem;
+          width: 70%;
+        }
+        .ga-1 {
+          padding-top: 4rem;
+        }
+        p {
+          cursor: pointer;
+          background-color: rgb(201, 225, 18, 0.5);
+          border-radius: 20px;
+          font-weight: bold;
+          padding: 0.5rem;
+          font-size: 1.75rem;
+          margin-top: 1rem;
+        }
+      }
+    }
+
+    div.homeCare {
+      padding: 3rem 0 3rem 0;
+      main {
+        .title-container {
+          .title-word {
+            width: 100%;
+            font-size: 2.5rem;
+          }
+          .title-description {
+            width: 100%;
+            font-size: 1.25rem;
+          }
+        }
+
+        .homeCare-service {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: row;
+          justify-content: center;
+          div {
+            font-size: 1.5rem;
+            width: 40%;
+            padding: 1.5rem;
+            margin: 0.75rem;
+            &:hover {
+              background-color: rgba(124, 104, 238, 0.3);
+              border: none;
+              color: rgba(0, 0, 0, 0.6);
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .G-container {
+    main.G-mainPart {
+      flex-direction: column;
+      div.imgContainer {
+        img {
+          width: 50%;
+          height: 50vh;
+        }
+        .G-desc {
+          font-size: 1.75rem;
+          padding-top: 8rem;
+          width: 40%;
+        }
+        .ga-1 {
+          padding-top: 10rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .G-container {
+    .title-container {
+      margin: 2rem;
+    }
+    .title-word {
+      font-size: 2.5rem;
+    }
+    .title-description {
+      font-size: 1.5rem;
+      padding: 10px;
+      line-height: 2rem;
+    }
+
+    main.G-mainPart {
+      flex-direction: column;
+      div.imgContainer {
+        img {
+          width: 80%;
+          height: 35vh;
+        }
+        .G-desc {
+          font-size: 1.5rem;
+          padding-top: 5rem;
+          width: 60%;
+        }
+        .ga-1 {
+          padding-top: 6rem;
+        }
+      }
+    }
+
+    div.homeCare {
+      padding: 3rem 0 3rem 0;
+      main {
+        .title-container {
+          .title-word {
+            width: 100%;
+            font-size: 2.5rem;
+          }
+          .title-description {
+            width: 100%;
+            font-size: 1.25rem;
+          }
+        }
+
+        .homeCare-service {
+          display: flex;
+          flex-wrap: wrap;
+          flex-direction: row;
+          justify-content: center;
+          div {
+            font-size: 1.5rem;
+            width: 40%;
+            padding: 1.5rem;
+            margin: 0.75rem;
+            &:hover {
+              background-color: rgba(124, 104, 238, 0.3);
+              border: none;
+              color: rgba(0, 0, 0, 0.6);
+              font-weight: bold;
+            }
           }
         }
       }

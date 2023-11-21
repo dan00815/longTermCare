@@ -11,13 +11,16 @@ const DComponent = () => {
           往返醫院及住家的交通車，為無障礙環境，輪椅可直接推上車
         </div>
       </div>
+
       <span style={{ display: "flex", justifyContent: "center" }}>
         <hr color="darkblue" width="95%" />
       </span>
 
       <div className="D-mainPart">
         <div className="imgContainer show">
-          <img src={car} alt="" />
+          <div>
+            <img src={car} alt="" />
+          </div>
         </div>
         <div className="D-part-Description">
           <p>長照交通車有政府補助，民眾只需支付少許的費用</p>

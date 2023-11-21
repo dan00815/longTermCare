@@ -7,7 +7,7 @@ const FComponent = () => {
   return (
     <div className="F-container">
       <div className="title-container">
-        <h1 className="title-word">F碼/環境改造</h1>
+        <h1 className="title-word">環境改造</h1>
         <div className="title-description">
           針對失能長輩的生活環境，進行必要之改造，創造友善的無障礙居住空間，更重要的是也保障其安全
         </div>

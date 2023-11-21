@@ -7,37 +7,51 @@
 }
 
 nav {
+  position: sticky;
   z-index: 99;
+  top: 0;
   background-color: rgba(250, 235, 215, 1);
   padding: 0.5rem;
-  display: flex;
-  position: sticky;
-  top: 0px;
   box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.4);
   .imgContainer {
+    position: relative;
     cursor: pointer;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    flex: 1 1 250px;
-    img {
-      width: 15%;
-      margin-left: 3rem;
+    div {
+      width: 100px;
+      height: 100px;
+      img {
+        width: 100%;
+      }
     }
-    .hometitle {
-      font-size: 2.25rem;
-      margin-left: 1.5rem;
+    p {
+      font-size: 1.75rem;
+      margin-left: 1rem;
     }
   }
+  i {
+    cursor: pointer;
+    opacity: 0;
+    font-size: 3rem;
+    position: absolute;
+    z-index: -3;
+    top: 35px;
+    right: 8px;
+    color: rgb(197, 169, 131, 0.8);
+  }
+
   .nav-ul {
-    flex: 3 1 200px;
-    justify-content: end;
-    align-items: center;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     list-style-type: none;
     li {
-      font-size: 1.5rem;
-      margin: 1.25rem;
+      font-size: 1.25rem;
+      margin: 0.5rem 1.25rem;
       a {
         text-decoration: none;
         color: black;
@@ -55,11 +69,12 @@ nav {
       justify-content: center;
       &:hover > .BC-tab {
         display: block;
-        animation: navTab 0.8s ease forwards;
+        animation: navTab 0.5s ease forwards;
       }
       .BC-tab {
         list-style-type: none;
         position: absolute;
+        top: -50rem;
         display: none;
         text-align: center;
         background-color: rgba(250, 235, 215, 0.9);
@@ -73,7 +88,7 @@ nav {
       justify-content: center;
       &:hover > .EF-tab {
         display: block;
-        animation: navTab 0.8s ease forwards;
+        animation: navTab 0.5s ease forwards;
       }
       .EF-tab {
         list-style-type: none;
@@ -84,6 +99,49 @@ nav {
         border: 3px solid rgba(255, 255, 255, 0.306);
         border-top: none;
       }
+    }
+  }
+}
+.nav-ul-RWD {
+  overflow-y: auto;
+  background-color: rgba(237, 192, 69, 0.9);
+  position: fixed;
+  left: -100%;
+  z-index: 30;
+  width: 45%;
+  transition: all 0.5s;
+  height: 100%;
+  li {
+    font-size: 2rem;
+    padding: 32px;
+    border-bottom: 3px solid rgba(128, 128, 128);
+    position: relative;
+    i {
+      opacity: 0.5;
+      position: absolute;
+      top: 38px;
+      right: 15px;
+      transition: all 0.3s;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+      padding-bottom: 1px;
+      transition: all ease 0.5s;
+      &:hover {
+        color: rgb(6, 178, 236);
+      }
+    }
+  }
+  ul.BC-tab,
+  ul.EF-tab {
+    background-color: rgba(240, 230, 140);
+    list-style-type: none;
+    li {
+      border: none;
+      position: relative;
+      left: 20px;
     }
   }
 }
@@ -144,7 +202,6 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  cursor: pointer;
   transition: all ease 0.5s;
   button {
     cursor: pointer;
@@ -164,55 +221,52 @@ nav {
     z-index: 2;
     width: 100%;
     height: 80vh;
+    // animation: slideEffect 25s 5s liner infinite;
+  }
+}
+
+@keyframes slideEffect {
+  4% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    left: 0;
+    /* 0 - 1秒 滑入*/
+  }
+  20% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    left: 0;
+    /* 1- 5秒靜止*/
+  }
+  24% {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    left: -100%;
+    /* 5-6秒滑出*/
+  }
+  26% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    left: -100%;
+    /* 6-6.5秒變透明*/
+  }
+  28% {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    left: 100%;
+    /* 6.5-7秒回到起始位置*/
   }
 }
 
 .QA-section {
   margin: 3rem 0;
-  .whatIs1 {
+  .whatIs1,
+  .whatIs2 {
     display: flex;
     justify-content: space-evenly;
     padding: 0 3rem;
     .whatIs1-que,
-    .whatIs1-ans {
-      border-radius: 20px;
-      font-weight: bold;
-      color: white;
-      width: 30rem;
-      height: 20rem;
-      align-items: center;
-      justify-content: center;
-      display: flex;
-      font-size: 2rem;
-      margin: 2rem;
-    }
-    .whatIs1-que {
-      background-color: rgba(220, 199, 13, 0.832);
-    }
-    .whatIs1-ans {
-      cursor: pointer;
-      background-color: rgba(4, 21, 178, 0.842);
-      &:hover {
-        transition: all ease 2s;
-        transform: rotateY(360deg);
-        .ans-filter {
-          display: block;
-        }
-        .re-ans-filter {
-          display: none;
-        }
-      }
-      .ans-filter {
-        font-size: 1.5rem;
-        padding: 0.8rem;
-        display: none;
-      }
-    }
-  }
-  .whatIs2 {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 0rem 3rem;
+    .whatIs1-ans,
     .whatIs2-que,
     .whatIs2-ans {
       border-radius: 20px;
@@ -223,36 +277,51 @@ nav {
       align-items: center;
       justify-content: center;
       display: flex;
-      font-size: 2rem;
+      font-size: 3rem;
       margin: 2rem;
     }
+
+    // rgba(202, 114, 6, 0.4),
+    .whatIs1-que,
     .whatIs2-que {
-      background-color: rgba(220, 199, 13, 0.832);
+      background: -webkit-radial-gradient(
+        rgb(255, 180, 60, 0.8),
+        rgba(64, 225, 225)
+      );
     }
+    .whatIs1-ans,
     .whatIs2-ans {
       cursor: pointer;
-      background-color: rgba(4, 21, 178, 0.842);
+      background-color: lightsalmon;
       &:hover {
-        transition: all ease 2s;
-        transform: rotateY(360deg);
+        background: -webkit-radial-gradient(
+          circle,
+          rgba(228, 95, 228, 0.7),
+          lightsalmon
+        );
         .ans-filter {
-          display: block;
+          transition: all 1s;
+          z-index: 3;
         }
         .re-ans-filter {
-          display: none;
+          z-index: -3;
         }
       }
+      .re-ans-filter {
+        position: absolute;
+      }
       .ans-filter {
-        font-size: 1.5rem;
+        position: relative;
+        z-index: -3;
+        font-size: 2rem;
         padding: 0.8rem;
-        display: none;
       }
     }
   }
 }
 
 .four-service {
-  background-color: rgba(110, 255, 212, 0.3);
+  background-color: rgba(77, 224, 243, 0.3);
   box-shadow: 10px 5px 10px 3px rgb(0, 0, 0, 0.4);
   overflow-x: hidden;
 
@@ -261,7 +330,6 @@ nav {
     margin: 2.5rem;
   }
   div,
-  article,
   p {
     display: flex;
     margin: 2rem 3rem;
@@ -274,7 +342,6 @@ nav {
       font-size: 2rem;
     }
     h2 {
-      // border: 1px solid red;
       font-weight: normal;
       font-size: 2rem;
       margin-left: 1rem;
@@ -321,46 +388,54 @@ nav {
     animation: swingEffect 6s infinite alternate 0.5s ease-in-out;
   }
 
-  div.identity-mini {
-    display: flex;
-    justify-content: space-around;
-    .identity-mini-card {
-      position: relative;
-      top: 14rem;
-      z-index: 1;
-      background-color: rgb(255, 200, 0, 0.7);
-      box-shadow: 10px 5px 10px 3px rgb(0, 0, 0, 0.4);
-      padding: 3px;
-      height: 12rem;
-      width: 13rem;
-      text-align: center;
-      font-size: 1.5rem;
+  .identity-mainPartial {
+    div.identity-mini {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: all ease 1s;
+      justify-content: space-around;
+      position: relative;
+      .identity-mini-card {
+        height: 12rem;
+        width: 13rem;
+        font-size: 1.5rem;
+        text-align: center;
+        background-color: rgb(255, 200, 0, 0.7);
+        box-shadow: 10px 5px 10px 3px rgb(0, 0, 0, 0.4);
+        padding: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        transition: all 1s;
+      }
+      .active {
+        top: 1rem;
+      }
+      .faded {
+        top: 15rem;
+      }
     }
-  }
 
-  div.identity {
-    position: relative;
-    top: 1rem;
-    z-index: 5;
-    display: flex;
-    justify-content: space-around;
-    .identity-card {
-      box-shadow: 10px 5px 10px 3px rgb(0, 0, 0, 0.4);
-      text-align: center;
-      line-height: 18rem;
-      background-color: rgba(205, 133, 63);
-      height: 18rem;
-      width: 15rem;
-      border-radius: 10px 10px 100px 100px;
-      p {
-        font-size: 2rem;
-        font-weight: bold;
-        color: white;
-        letter-spacing: 8px;
+    div.identity {
+      position: relative;
+      z-index: 5;
+      display: flex;
+      justify-content: space-around;
+      .identity-card {
+        box-shadow: 10px 5px 10px 3px rgb(0, 0, 0, 0.4);
+        text-align: center;
+        line-height: 18rem;
+        background-color: rgba(205, 133, 63);
+        height: 18rem;
+        width: 15rem;
+        border-radius: 10px 10px 100px 100px;
+
+        p {
+          font-size: 2rem;
+          font-weight: bold;
+          color: white;
+          letter-spacing: 8px;
+        }
       }
     }
   }
@@ -386,6 +461,10 @@ nav {
       width: 15vw;
       p {
         font-size: 1.5rem;
+        strong {
+          color: red;
+          font-size: 2.5rem;
+        }
       }
     }
     span {
@@ -411,6 +490,11 @@ nav {
   }
   img {
     width: 100%;
+  }
+  .phoneImg {
+    width: 80%;
+    transform: translateY(20px);
+    margin-left: 25px;
   }
 }
 
@@ -441,10 +525,10 @@ nav {
 
 @keyframes navTab {
   from {
-    top: 60px;
+    top: 140px;
   }
   to {
-    top: 65px;
+    top: 142px;
   }
 }
 
@@ -454,5 +538,310 @@ nav {
   }
   to {
     transform: skewX(-15deg);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  nav {
+    i {
+      opacity: 1;
+      z-index: 3;
+    }
+    .nav-ul {
+      display: none;
+    }
+  }
+
+  .nav-ul-RWD {
+    overflow-y: auto;
+    // height: 100%;
+    li {
+      font-size: 1.75rem;
+      padding: 32px;
+      position: relative;
+      i {
+        opacity: 0.5;
+        position: absolute;
+        top: 38px;
+        right: 15px;
+        transition: all 0.3s;
+      }
+
+      a {
+        text-decoration: none;
+        color: black;
+        padding-bottom: 1px;
+        transition: all ease 0.5s;
+        &:hover {
+          color: rgb(6, 178, 236);
+        }
+      }
+    }
+    ul.BC-tab,
+    ul.EF-tab {
+      background-color: rgba(240, 230, 140);
+      list-style-type: none;
+      li {
+        border: none;
+        position: relative;
+        left: 20px;
+      }
+    }
+  }
+
+  .QA-section {
+    .whatIs1,
+    .whatIs2 {
+      .active {
+        background: -webkit-radial-gradient(
+          circle,
+          rgba(228, 95, 228, 0.9),
+          lightsalmon
+        );
+        .ans-filter {
+          transition: all 1s;
+          z-index: 3;
+        }
+        .re-ans-filter {
+          z-index: -3;
+        }
+      }
+    }
+  }
+
+  .identity-partial {
+    height: 100vh;
+    img,
+    div.filter {
+      height: 100vh;
+    }
+
+    div.identity-mini {
+      .identity-mini-card {
+        width: 12rem;
+      }
+    }
+    div.identity-mainPartial {
+      position: relative;
+      top: 5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 570px) {
+  nav {
+    i {
+      font-size: 2rem;
+      top: 40px;
+    }
+  }
+
+  .nav-ul-RWD {
+    overflow-y: auto;
+    width: 100%;
+    li {
+      font-size: 1.5rem;
+      padding: 16px;
+      i {
+        top: 22px;
+      }
+    }
+  }
+
+  .slide {
+    height: 30vh;
+    button {
+      font-size: 2rem;
+      width: 30px;
+      height: 50px;
+    }
+    img {
+      height: 30vh;
+    }
+  }
+
+  .QA-section {
+    margin: 1rem 0;
+    .whatIs1,
+    .whatIs2 {
+      padding: 0 0.75rem;
+      .whatIs1-que,
+      .whatIs1-ans,
+      .whatIs2-que,
+      .whatIs2-ans {
+        width: 30rem;
+        height: 10rem;
+        font-size: 1rem;
+        margin: 0.75rem;
+      }
+      .whatIs1-ans,
+      .whatIs2-ans {
+        .ans-filter {
+          z-index: -3;
+          font-size: 0.75rem;
+          padding: 1rem;
+        }
+      }
+      .active {
+        background: -webkit-radial-gradient(
+          circle,
+          rgba(228, 95, 228, 0.9),
+          lightsalmon
+        );
+        .ans-filter {
+          transition: all 1s;
+          z-index: 3;
+        }
+        .re-ans-filter {
+          z-index: -3;
+        }
+      }
+    }
+  }
+
+  .four-service {
+    div,
+    p {
+      margin: 1.25rem 0rem;
+      width: 80vw;
+      i {
+        font-size: 1.75rem;
+      }
+      h2 {
+        font-size: 1.75rem;
+      }
+    }
+
+    p {
+      font-size: 1.25rem;
+      margin-left: 0rem;
+      line-height: 2.5rem;
+    }
+  }
+
+  .identity-partial {
+    height: 100vh;
+    img {
+      // width: 100%;
+      height: 100vh;
+    }
+    h1 {
+      padding-top: 1.5rem;
+      font-size: 2.75rem;
+    }
+    div.filter {
+      width: 100%;
+      height: 100vh;
+    }
+
+    .identity-mainPartial {
+      div.identity-mini {
+        display: flex;
+        flex-wrap: wrap;
+        top: -10rem;
+        .identity-mini-card {
+          box-shadow: 5px 5px 5px 3px rgb(0, 0, 0, 0.4);
+          font-size: 1rem;
+          height: 7.5rem;
+          width: 36%;
+          margin-bottom: 15rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+        }
+        .active {
+          top: 5.5rem;
+        }
+        .faded {
+          top: 15rem;
+        }
+      }
+
+      div.identity {
+        width: 100%;
+        position: absolute;
+        top: 3rem;
+        z-index: 5;
+        display: flex;
+        flex-wrap: wrap;
+        .identity-card {
+          width: 40%;
+          height: 14rem;
+          line-height: 14rem;
+          margin-bottom: 8rem;
+          p {
+            font-size: 1.5rem;
+            letter-spacing: 3px;
+          }
+        }
+      }
+    }
+  }
+
+  .apply {
+    h1 {
+      font-size: 2rem;
+      padding: 1rem;
+    }
+    div.flowChart {
+      div.chart-elm {
+        width: 30vw;
+        p {
+          font-size: 1rem;
+          strong {
+            font-size: 1rem;
+          }
+        }
+      }
+      span {
+        p {
+          line-height: 1rem;
+        }
+        i {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    p {
+      text-align: center;
+      font-size: 0.75rem;
+      padding: 5px 0;
+    }
+    .phoneImg {
+      width: 80%;
+      transform: translateY(0);
+      margin-left: 8px;
+    }
+  }
+
+  .footer {
+    .contactInfo {
+      .main-info {
+        font-size: 1rem;
+        margin: 1rem 1rem 0.5rem 0.5rem;
+      }
+      .mail-info,
+      .phone-info {
+        font-size: 1rem;
+        margin: 0.5rem 1rem 0.5rem 0.5rem;
+        p {
+          padding-left: 5px;
+        }
+      }
+    }
+
+    .text-info {
+      font-size: 0.75rem;
+    }
+
+    .imageContainer {
+      div {
+        width: 30px;
+        height: 30px;
+        margin: 0.5rem;
+      }
+    }
   }
 }

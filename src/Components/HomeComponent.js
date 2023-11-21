@@ -9,13 +9,16 @@ import oldService from "./img/old-service.png";
 const HomeComponent = ({ Images }) => {
   const [currentImgIndex, setCurrentImgIndex] = useState(0);
   const [isAutoPlay, setIsAutoPlay] = useState(true);
-  const [showUpCard1, setShowUpCard1] = useState(false);
-  const [showUpCard2, setShowUpCard2] = useState(false);
-  const [showUpCard3, setShowUpCard3] = useState(false);
-  const [showUpCard4, setShowUpCard4] = useState(false);
   const [goTop, setGoTop] = useState(false);
+  const [isActiveAns1, setIsActiveAns1] = useState(false);
+  const [isActiveAns2, setIsActiveAns2] = useState(false);
+  const [MiniCard1, setMiniCard1] = useState(false);
+  const [MiniCard2, setMiniCard2] = useState(false);
+  const [MiniCard3, setMiniCard3] = useState(false);
+  const [MiniCard4, setMiniCard4] = useState(false);
 
   const preSlide = () => {
+    setIsAutoPlay(false);
     if (currentImgIndex == 0) {
       setCurrentImgIndex(4);
     } else {
@@ -23,6 +26,7 @@ const HomeComponent = ({ Images }) => {
     }
   };
   const nextSlide = () => {
+    setIsAutoPlay(false);
     if (currentImgIndex >= 4) {
       setCurrentImgIndex(0);
     } else {
@@ -37,6 +41,7 @@ const HomeComponent = ({ Images }) => {
     setIsAutoPlay(false);
     console.log("stop");
   };
+
   const slideMove = () => {
     if (isAutoPlay) {
       const interval = setInterval(() => {
@@ -49,6 +54,33 @@ const HomeComponent = ({ Images }) => {
     }
   };
   slideMove();
+
+  const hanleToActiveAns1 = () => {
+    setIsActiveAns1(!isActiveAns1);
+  };
+  const hanleToActiveAns2 = () => {
+    setIsActiveAns2(!isActiveAns2);
+  };
+
+  const handleToSlideUp1 = () => {
+    setMiniCard1(!MiniCard1);
+  };
+  const handleToSlideUp2 = () => {
+    setMiniCard2(!MiniCard2);
+  };
+  const handleToSlideUp3 = () => {
+    setMiniCard3(!MiniCard3);
+  };
+  const handleToSlideUp4 = () => {
+    setMiniCard4(!MiniCard4);
+  };
+
+  const CloseSlideUp = () => {
+    setMiniCard1(false);
+    setMiniCard2(false);
+    setMiniCard3(false);
+    setMiniCard4(false);
+  };
 
   const appearElement = document.querySelectorAll(".appear");
   const InfoElement = document.querySelectorAll(".four-service");
@@ -63,8 +95,6 @@ const HomeComponent = ({ Images }) => {
       const top = element.getBoundingClientRect().top;
       if (top < trigger) {
         element.classList.add("show");
-      } else {
-        element.classList.remove("show");
       }
     });
 
@@ -90,25 +120,6 @@ const HomeComponent = ({ Images }) => {
   };
   window.addEventListener("scroll", checkElements);
 
-  const handleCard1 = () => {
-    setShowUpCard1(true);
-  };
-  const handleCard2 = () => {
-    setShowUpCard2(true);
-  };
-  const handleCard3 = () => {
-    setShowUpCard3(true);
-  };
-  const handleCard4 = () => {
-    setShowUpCard4(true);
-  };
-  const handleClose = () => {
-    setShowUpCard1(false);
-    setShowUpCard2(false);
-    setShowUpCard3(false);
-    setShowUpCard4(false);
-  };
-
   return (
     <div>
       {/* 幻燈片 */}
@@ -122,7 +133,11 @@ const HomeComponent = ({ Images }) => {
           ＜
         </button>
 
-        <img src={Images[currentImgIndex]} alt="無法呈現" />
+        <img
+          src={Images[currentImgIndex]}
+          alt="無法呈現"
+          onClick={retrunSldie}
+        />
 
         <button
           className="next-button"
@@ -138,7 +153,10 @@ const HomeComponent = ({ Images }) => {
         <section className="QA-section">
           <div className="whatIs1">
             <div className="whatIs1-que">什麼是長照？</div>
-            <div className="whatIs1-ans">
+            <div
+              className={`whatIs1-ans ${isActiveAns1 ? "active" : ""}`}
+              onClick={hanleToActiveAns1}
+            >
               <div className="re-ans-filter">解答！</div>
               <div className="ans-filter">
                 指的是長期照顧
@@ -151,7 +169,10 @@ const HomeComponent = ({ Images }) => {
           </div>
 
           <div className="whatIs2">
-            <div className="whatIs2-ans">
+            <div
+              className={`whatIs2-ans ${isActiveAns2 ? "active" : ""}`}
+              onClick={hanleToActiveAns2}
+            >
               <div className="re-ans-filter">解答！</div>
               <div className="ans-filter">
                 人終有一老，邁入老年階段，會感受到體力明顯下降
@@ -219,65 +240,75 @@ const HomeComponent = ({ Images }) => {
           <div className="filter"></div>
           <h1>誰可以申請長照</h1>
 
-          <div className="identity-mini">
-            <div
-              className="identity-mini-card"
-              style={{ top: showUpCard1 ? "2rem" : "13rem" }}
-            >
-              65歲以上
-              <br />
-              失能、衰弱、獨居老人
+          <div className="identity-mainPartial">
+            <div className="identity-mini">
+              <div
+                className={`identity-mini-card ${
+                  MiniCard1 ? "active" : "faded"
+                }`}
+              >
+                65歲以上
+                <br />
+                失能、衰弱、獨居老人
+              </div>
+              <div
+                className={`identity-mini-card ${
+                  MiniCard2 ? "active" : "faded"
+                }`}
+              >
+                55歲以上
+              </div>
+              <div
+                className={`identity-mini-card  ${
+                  MiniCard3 ? "active" : "faded"
+                }`}
+              >
+                50歲以上
+              </div>
+              <div
+                className={`identity-mini-card  ${
+                  MiniCard4 ? "active" : "faded"
+                }`}
+              >
+                不限年齡
+                <br />
+                只需持有身障手冊
+              </div>
             </div>
-            <div
-              className="identity-mini-card"
-              style={{ top: showUpCard2 ? "2rem" : "13rem" }}
-            >
-              55歲以上
-            </div>
-            <div
-              className="identity-mini-card"
-              style={{ top: showUpCard3 ? "2rem" : "13rem" }}
-            >
-              50歲以上
-            </div>
-            <div
-              className="identity-mini-card"
-              style={{ top: showUpCard4 ? "2rem" : "13rem" }}
-            >
-              不限年齡
-              <br />
-              只需持有身障手冊
-            </div>
-          </div>
 
-          <div className="identity">
-            <div
-              className="identity-card "
-              onMouseOver={handleCard1}
-              onMouseOut={handleClose}
-            >
-              <p>失能長者</p>
-            </div>
-            <div
-              className="identity-card"
-              onMouseOver={handleCard2}
-              onMouseOut={handleClose}
-            >
-              <p>失能原住民</p>
-            </div>
-            <div
-              className="identity-card"
-              onMouseOver={handleCard3}
-              onMouseOut={handleClose}
-            >
-              <p>失智長輩</p>
-            </div>
-            <div
-              className="identity-card"
-              onMouseOver={handleCard4}
-              onMouseOut={handleClose}
-            >
-              <p>身心障礙者</p>
+            <div className="identity">
+              <div
+                className="identity-card"
+                onMouseOver={handleToSlideUp1}
+                onMouseLeave={CloseSlideUp}
+                onClick={handleToSlideUp1}
+              >
+                <p>失能長者</p>
+              </div>
+              <div
+                className="identity-card"
+                onMouseOver={handleToSlideUp2}
+                onMouseLeave={CloseSlideUp}
+                onClick={handleToSlideUp2}
+              >
+                <p>失能原住民</p>
+              </div>
+              <div
+                className="identity-card"
+                onMouseOver={handleToSlideUp3}
+                onMouseLeave={CloseSlideUp}
+                onClick={handleToSlideUp3}
+              >
+                <p>失智長輩</p>
+              </div>
+              <div
+                className="identity-card"
+                onMouseOver={handleToSlideUp4}
+                onMouseLeave={CloseSlideUp}
+                onClick={handleToSlideUp4}
+              >
+                <p>身心障礙者</p>
+              </div>
             </div>
           </div>
         </section>
@@ -289,24 +320,9 @@ const HomeComponent = ({ Images }) => {
             <div className="chart-elm">
               <p>
                 長照專線
-                <strong
-                  style={{
-                    color: "red",
-                    fontSize: "2.5rem",
-                  }}
-                >
-                  1966
-                </strong>
+                <strong>1966</strong>
               </p>
-              <img
-                src={phone}
-                alt=""
-                style={{
-                  width: "80%",
-                  transform: "translateY(20px)",
-                  marginLeft: "25px",
-                }}
-              />
+              <img src={phone} alt="" className="phoneImg" />
             </div>
             <span>
               <i className="fa-solid fa-right-long"></i>

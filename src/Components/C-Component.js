@@ -26,6 +26,7 @@ const CComponent = () => {
             恢復日常生活功能，訓練長輩完成如自行洗臉、穿脫衣服、上廁所、從床上或椅子上起身、獨自行走
           </div>
         </div>
+
         <div className="C-div-part even">
           <div className="code-part">
             <p>
@@ -38,6 +39,7 @@ const CComponent = () => {
             針對身障者、失智症者，提供個別化服務，主要協助增進社交技巧，能多與人互動及訓練生活自理能力
           </div>
         </div>
+
         <div className="C-div-part odd">
           <div className="code-part">
             <p>
@@ -50,6 +52,7 @@ const CComponent = () => {
             針對營養不良、肌少症或體態異常的長輩，安排營養師替其制定完整的飲食菜單
           </div>
         </div>
+
         <div className="C-div-part even">
           <div className="code-part">
             <p>
@@ -64,6 +67,7 @@ const CComponent = () => {
             安排老師指導吞嚥技巧
           </div>
         </div>
+
         <div className="C-div-part odd">
           <div className="code-part">
             <p>
@@ -76,9 +80,10 @@ const CComponent = () => {
             針對出現日夜顛倒、妄想等困擾行為的長輩，由老師提供照顧方法及引導方式
           </div>
         </div>
+
         <div className="C-div-part even">
           <div className="code-part">
-            <p style={{ fontSize: "1.8rem" }}>
+            <p style={{}}>
               CB04
               <br />
               臥床或活動受限照護

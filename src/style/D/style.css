@@ -7,11 +7,11 @@
 .D-container .D-mainPart {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .D-container .D-mainPart .imgContainer {
   margin: 2rem;
   width: 50%;
-  height: 30%;
 }
 .D-container .D-mainPart .imgContainer img {
   width: 100%;
@@ -36,5 +36,36 @@
   }
   100% {
     transform: skewX(1deg);
+  }
+}
+@media screen and (max-width: 1100px) {
+  div.D-container div.D-mainPart .D-part-Description p {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 570px) {
+  .D-container .title-container {
+    margin: 1.5rem;
+  }
+  .D-container .title-word {
+    font-size: 2.5rem;
+  }
+  .D-container .title-description {
+    font-size: 1.5rem;
+    padding: 10px;
+    line-height: 2rem;
+  }
+  .D-container .D-mainPart {
+    flex-direction: column;
+  }
+  .D-container .D-mainPart .imgContainer {
+    margin: 1rem;
+    width: 70%;
+  }
+  .D-container .D-mainPart .imgContainer img {
+    width: 100%;
+  }
+  .D-container .D-mainPart .D-part-Description p {
+    font-size: rem;
   }
 }/*# sourceMappingURL=style.css.map */

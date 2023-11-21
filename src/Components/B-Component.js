@@ -9,7 +9,7 @@ const BComponent = () => {
       <div className="B-title">
         <h1>BA碼/居家服務</h1>
         <div className="B-description">
-          到府提供長輩服務，滿足各種日常需求
+          到府提供長輩服務，滿足日常需求
           <br />
           諸如準備餐點、幫忙洗澡、陪同外出看診等等，甚至包含整理家務
           <br />
@@ -19,6 +19,7 @@ const BComponent = () => {
           <img src={BAService} alt="" />
         </div>
       </div>
+
       <table>
         <tr>
           <th

@@ -30,7 +30,7 @@ const EComponents = () => {
       className="E-container"
       style={{ backgroundColor: isDisplay ? "rgba(0, 0, 0, 0.6)" : "" }}
     >
-      <div className="title-container" style={{ marginTop: "0" }}>
+      <div className="title-container">
         <h1 className="title-word">輔具介紹</h1>
         <div className="title-description">
           幫助失能長輩於日常生活中更加便利之工具，我們稱之為輔具，政府針對各項輔具訂有補助措施，而又能細分為僅能直接購置或使用租賃的方式
@@ -58,11 +58,12 @@ const EComponents = () => {
           <thead>
             <tr>
               <th>名稱</th>
-              <th>說明</th>
-              <th>租賃/購置</th>
+              <th className="td-desc">說明</th>
+              <th className="td-rent">租賃/購置</th>
               <th>圖片</th>
             </tr>
           </thead>
+
           <tbody>
             <tr>
               <td className="td-name">輪椅</td>
@@ -71,7 +72,7 @@ const EComponents = () => {
                 <br />
                 僅能從輔具清單中挑一款輪椅申請補助
               </td>
-              <td className="td-rent">可租賃可購置</td>
+              <td className="td-rent ">可租賃可購置</td>
               <td className="imgContainer">
                 <img
                   src={tool1}
@@ -81,6 +82,29 @@ const EComponents = () => {
                 ></img>
               </td>
             </tr>
+
+            <tr>
+              <th
+                colspan="3"
+                style={{ textAlign: "center" }}
+                className="RWD-table RWD-desc-title"
+              >
+                說明
+              </th>
+            </tr>
+            <tr>
+              <td colspan="3" className="RWD-table RWD-content">
+                建議依照身形、體重、自身需求不同，挑選適合的輪椅，若不清楚亦可詢問專業老師
+                <br />
+                僅能從輔具清單中挑一款輪椅申請補助
+              </td>
+            </tr>
+
+            <tr>
+              <th className="RWD-table RWD-title">名稱</th>
+              <th className="RWD-table RWD-title">圖片</th>
+            </tr>
+
             <tr>
               <td className="td-name">便盆椅</td>
               <td className="td-desc">
@@ -98,6 +122,28 @@ const EComponents = () => {
                 />
               </td>
             </tr>
+
+            <tr>
+              <th
+                colspan="3"
+                style={{ textAlign: "center" }}
+                className="RWD-table RWD-desc-title"
+              >
+                說明
+              </th>
+            </tr>
+            <tr>
+              <td colspan="3" className="RWD-table RWD-content">
+                方便使用者如廁，對於有跌倒風險的長輩來說幫助很大，通常會放於床邊方便使用
+                <br />
+                有輪子的甚至可以將行動不便的長輩直接推至浴室洗澡
+              </td>
+            </tr>
+
+            <tr>
+              <th className="RWD-table RWD-title">名稱</th>
+              <th className="RWD-table RWD-title">圖片</th>
+            </tr>
             <tr>
               <td className="td-name">沐浴椅</td>
               <td className="td-desc">
@@ -112,6 +158,26 @@ const EComponents = () => {
                   style={{ zIndex: isDisplay ? "-3" : "" }}
                 />
               </td>
+            </tr>
+
+            <tr>
+              <th
+                colspan="3"
+                style={{ textAlign: "center" }}
+                className="RWD-table RWD-desc-title"
+              >
+                說明
+              </th>
+            </tr>
+            <tr>
+              <td colspan="3" className="RWD-table RWD-content">
+                方便行動不便的長輩在浴室可以坐著洗澡，相較於坐在馬桶上，有靠背的洗澡椅更加安全
+              </td>
+            </tr>
+
+            <tr>
+              <th className="RWD-table RWD-title">名稱</th>
+              <th className="RWD-table RWD-title">圖片</th>
             </tr>
             <tr>
               <td className="td-name">單拐</td>
@@ -130,6 +196,26 @@ const EComponents = () => {
               </td>
             </tr>
             <tr>
+              <th
+                colspan="3"
+                style={{ textAlign: "center" }}
+                className="RWD-table RWD-desc-title"
+              >
+                說明
+              </th>
+            </tr>
+            <tr>
+              <td colspan="3" className="RWD-table RWD-content">
+                讓行動不便的長輩做支撐，可避免跌倒的發生 <br />
+                依照身形、身高差異選取不同的尺寸，若有問題可諮詢專業老師
+              </td>
+            </tr>
+
+            <tr>
+              <th className="RWD-table RWD-title">名稱</th>
+              <th className="RWD-table RWD-title">圖片</th>
+            </tr>
+            <tr>
               <td className="td-name">助行器</td>
               <td className="td-desc">
                 相較於單拐為更加安全的輔具 <br />
@@ -146,6 +232,26 @@ const EComponents = () => {
               </td>
             </tr>
             <tr>
+              <th
+                colspan="3"
+                style={{ textAlign: "center" }}
+                className="RWD-table RWD-desc-title"
+              >
+                說明
+              </th>
+            </tr>
+            <tr>
+              <td colspan="3" className="RWD-table RWD-content">
+                相較於單拐為更加安全的輔具 <br />
+                可選配加裝輪子或選擇有輪子的款式，使用起來會更加安全穩固
+              </td>
+            </tr>
+
+            <tr>
+              <th className="RWD-table RWD-title">名稱</th>
+              <th className="RWD-table RWD-title">圖片</th>
+            </tr>
+            <tr>
               <td className="td-name">移位腰帶</td>
               <td className="td-desc">
                 讓照顧者使用，更方便做移位的動作 <br />
@@ -160,6 +266,27 @@ const EComponents = () => {
                   style={{ zIndex: isDisplay ? "-3" : "" }}
                 />
               </td>
+            </tr>
+
+            <tr>
+              <th
+                colspan="3"
+                style={{ textAlign: "center" }}
+                className="RWD-table RWD-desc-title"
+              >
+                說明
+              </th>
+            </tr>
+            <tr>
+              <td colspan="3" className="RWD-table RWD-content">
+                讓照顧者使用，更方便做移位的動作 <br />
+                將腰帶穿在被照顧者的身上，雙腳跨過繩帶，兩側的把手讓照顧者抓取便於轉移位
+              </td>
+            </tr>
+
+            <tr>
+              <th className="RWD-table RWD-title">名稱</th>
+              <th className="RWD-table RWD-title">圖片</th>
             </tr>
             <tr>
               <td className="td-name">電動床</td>
@@ -178,6 +305,28 @@ const EComponents = () => {
                 />
               </td>
             </tr>
+
+            <tr>
+              <th
+                colspan="3"
+                style={{ textAlign: "center" }}
+                className="RWD-table RWD-desc-title"
+              >
+                說明
+              </th>
+            </tr>
+            <tr>
+              <td colspan="3" className="RWD-table RWD-content">
+                具有升降功能的電動床，讓照顧這件事更加得心應手
+                <br />
+                移位時可將床降低，餵食前將床升高並讓床頭抬起
+              </td>
+            </tr>
+
+            <tr>
+              <th className="RWD-table RWD-title">名稱</th>
+              <th className="RWD-table RWD-title">圖片</th>
+            </tr>
             <tr>
               <td className="td-name">爬梯機</td>
               <td className="td-desc">
@@ -191,6 +340,21 @@ const EComponents = () => {
                   alt="圖片"
                   style={{ zIndex: isDisplay ? "-3" : "" }}
                 />
+              </td>
+            </tr>
+
+            <tr>
+              <th
+                colspan="3"
+                style={{ textAlign: "center" }}
+                className="RWD-table RWD-desc-title"
+              >
+                說明
+              </th>
+            </tr>
+            <tr>
+              <td colspan="3" className="RWD-table RWD-content">
+                協助行動不便及體重較重的長輩完成上下樓梯的動作
               </td>
             </tr>
           </tbody>

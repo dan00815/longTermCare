@@ -8,3 +8,24 @@
     margin-bottom: 3rem;
   }
 }
+
+@media screen and (max-width: 570px) {
+  div.F-container {
+    .title-container {
+      margin: 2rem;
+    }
+    .title-word {
+      font-size: 2.5rem;
+    }
+    .title-description {
+      font-size: 1.5rem;
+      padding: 10px;
+      line-height: 2rem;
+    }
+
+    
+    .img-container {
+      display: none;
+    }
+  }
+}
