@@ -36,16 +36,6 @@ const footer = () => {
             <img src={GithubIcon} alt="Github"></img>
           </a>
         </div>
-
-        {/* <a href="https://www.facebook.com/" target="_blank">
-          <img src={FBIcon} alt="FB"></img>
-        </a>
-        <a href="https://www.instagram.com/" target="_blank">
-          <img src={IGIcon} alt="IG"></img>
-        </a>
-        <a href="#">
-          <img src={GithubIcon} alt="Github"></img>
-        </a> */}
       </div>
     </div>
   );

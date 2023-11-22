@@ -28,6 +28,7 @@
   padding-top: 6rem;
 }
 .G-container main.G-mainPart div.imgContainer p {
+  position: relative;
   cursor: pointer;
   background-color: rgba(201, 225, 18, 0.5);
   border-radius: 20px;
@@ -35,6 +36,22 @@
   padding: 0.5rem;
   font-size: 1.75rem;
   margin-top: 1rem;
+}
+.G-container main.G-mainPart div.imgContainer span {
+  font-weight: bold;
+  color: lightsalmon;
+  animation: flashEffect 1s ease-in-out 0s infinite alternate;
+  position: relative;
+  top: -4rem;
+  left: 4rem;
+}
+@keyframes flashEffect {
+  from {
+    transform: scale(1) rotate(10deg);
+  }
+  to {
+    transform: scale(1.8) rotate(10deg);
+  }
 }
 .G-container div.homeCare {
   padding: 5rem 0 3rem 0;

@@ -8,11 +8,19 @@ import { useState, useEffect } from "react";
 const Nav = () => {
   const Navigate = useNavigate();
   const returnHome = () => {
+    setHamburgerBtn(true);
+    setThreeLineBtn(false);
+    setRWDNav(false);
+    setBCOn(false);
+    setEFOn(false);
+    setBCClick(true);
+    setEFClick(true);
     Navigate("/");
   };
 
   const [RWDNav, setRWDNav] = useState(false);
   const [hamburgerBtn, setHamburgerBtn] = useState(true);
+  const [threeLineBtn, setThreeLineBtn] = useState(false);
   const [BCOn, setBCOn] = useState(false);
   const [BCClick, setBCClick] = useState(true);
   const [EFOn, setEFOn] = useState(false);
@@ -21,10 +29,12 @@ const Nav = () => {
   const navButtonOpen = () => {
     setRWDNav(!RWDNav);
     setHamburgerBtn(false);
+    setThreeLineBtn(true);
   };
 
   const navButtonClose = () => {
     setHamburgerBtn(true);
+    setThreeLineBtn(false);
     setRWDNav(!RWDNav);
     setBCOn(false);
     setEFOn(false);
@@ -58,7 +68,7 @@ const Nav = () => {
         ></i>
         <i
           className="fa-solid fa-xmark"
-          style={{ display: hamburgerBtn ? "none" : "block", right: "15px" }}
+          style={{ display: threeLineBtn ? "block" : "none", right: "15px" }}
           onClick={navButtonClose}
         ></i>
 
@@ -98,7 +108,7 @@ const Nav = () => {
       </nav>
 
       <ul className="nav-ul-RWD" style={{ left: RWDNav ? "0%" : "-100%" }}>
-        <li>
+        <li onClick={navButtonClose}>
           <Link to="/">首頁</Link>
         </li>
         <li onClick={hanleToCloseBC}>
@@ -115,15 +125,15 @@ const Nav = () => {
             display: BCOn ? "block" : "none",
           }}
         >
-          <li>
+          <li onClick={navButtonClose}>
             <Link to="/B">照顧服務</Link>
           </li>
-          <li>
+          <li onClick={navButtonClose}>
             <Link to="/C">專業服務</Link>
           </li>
         </ul>
 
-        <li>
+        <li onClick={navButtonClose}>
           <Link to="/D">交通接送</Link>
         </li>
         <li onClick={hanleToCloseEF}>
@@ -139,14 +149,14 @@ const Nav = () => {
             display: EFOn ? "block" : "none",
           }}
         >
-          <li>
+          <li onClick={navButtonClose}>
             <Link to="/E">輔具介紹</Link>
           </li>
-          <li>
+          <li onClick={navButtonClose}>
             <Link to="/F">無障礙環改</Link>
           </li>
         </ul>
-        <li>
+        <li onClick={navButtonClose}>
           <Link to="/G">喘息服務</Link>
         </li>
       </ul>

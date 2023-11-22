@@ -3,7 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  font-family: arial, "Microsoft JhengHei", sans-serif;
+  font-family: "Noto Sans TC", sans-serif;
 }
 
 nav {
@@ -161,6 +161,9 @@ nav {
       flex-wrap: wrap;
       font-size: 1.25rem;
       margin: 0.5rem 1rem 0.5rem 1.5rem;
+      i {
+        margin-top: 5px;
+      }
       p {
         padding-left: 10px;
       }
@@ -225,39 +228,6 @@ nav {
   }
 }
 
-@keyframes slideEffect {
-  4% {
-    opacity: 1;
-    filter: alpha(opacity=100);
-    left: 0;
-    /* 0 - 1秒 滑入*/
-  }
-  20% {
-    opacity: 1;
-    filter: alpha(opacity=100);
-    left: 0;
-    /* 1- 5秒靜止*/
-  }
-  24% {
-    opacity: 1;
-    filter: alpha(opacity=100);
-    left: -100%;
-    /* 5-6秒滑出*/
-  }
-  26% {
-    opacity: 0;
-    filter: alpha(opacity=0);
-    left: -100%;
-    /* 6-6.5秒變透明*/
-  }
-  28% {
-    opacity: 0;
-    filter: alpha(opacity=0);
-    left: 100%;
-    /* 6.5-7秒回到起始位置*/
-  }
-}
-
 .QA-section {
   margin: 3rem 0;
   .whatIs1,
@@ -281,7 +251,6 @@ nav {
       margin: 2rem;
     }
 
-    // rgba(202, 114, 6, 0.4),
     .whatIs1-que,
     .whatIs2-que {
       background: -webkit-radial-gradient(
@@ -316,6 +285,13 @@ nav {
         font-size: 2rem;
         padding: 0.8rem;
       }
+    }
+
+    i {
+      color: rgb(101, 98, 98);
+      font-size: 3rem;
+      display: flex;
+      align-items: center;
     }
   }
 }
@@ -362,8 +338,8 @@ nav {
 }
 
 .identity-partial {
+  overflow: hidden;
   height: 100vh;
-  overflow-x: hidden;
   img {
     width: 100%;
     height: 100vh;
@@ -474,9 +450,12 @@ nav {
       align-items: center;
       justify-content: center;
       p {
-        line-height: 1.75rem;
+        line-height: 2rem;
+        font-size: 1.25rem;
+        padding-top: 3rem;
       }
       i {
+        padding-top: 3rem;
         color: rgba(255, 0, 0);
         font-size: 3.5rem;
       }
@@ -696,6 +675,9 @@ nav {
           z-index: -3;
         }
       }
+      i {
+        font-size: 1.5rem;
+      }
     }
   }
 
@@ -720,18 +702,18 @@ nav {
   }
 
   .identity-partial {
-    height: 100vh;
+    height: 110vh;
     img {
       // width: 100%;
-      height: 100vh;
+      height: 110vh;
     }
     h1 {
-      padding-top: 1.5rem;
+      padding-top: 5rem;
       font-size: 2.75rem;
     }
     div.filter {
       width: 100%;
-      height: 100vh;
+      height: 110vh;
     }
 
     .identity-mainPartial {
@@ -796,10 +778,14 @@ nav {
       }
       span {
         p {
-          line-height: 1rem;
+          font-size: 0.5rem;
+          width: 200%;
+          line-height: 0.75rem;
+          padding-top: 1rem;
         }
         i {
-          font-size: 1rem;
+          padding-top: 0;
+          font-size: 1.5rem;
         }
       }
     }

@@ -89,6 +89,9 @@
   }
 }
 @media screen and (max-width: 570px) {
+  div.E-container .title-container {
+    margin: 1.25rem;
+  }
   div.E-container .title-word {
     font-size: 2.5rem;
   }

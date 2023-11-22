@@ -52,10 +52,11 @@ const GComponent = () => {
           >
             類似長輩的幼兒園，在這邊接受照顧及用餐，分為半天及全天
           </div>
-          <p onClick={handleToShow1}>日間照顧喘息</p>
+          <p onClick={handleToShow1}>日照喘息</p>
+          <span>Click!</span>
         </div>
 
-        <div className="imgContainer ">
+        <div className="imgContainer">
           <img
             src={CareCenter}
             alt="無法顯示"
@@ -68,6 +69,7 @@ const GComponent = () => {
             長輩在此接受24小時照顧，照顧者能獲得長時間的休息，依額度不同可申請14天或21天
           </div>
           <p onClick={handleToShow2}>機構喘息</p>
+          <span>Click!</span>
         </div>
 
         <div className="imgContainer">
@@ -83,6 +85,7 @@ const GComponent = () => {
             派受訓過的居服員至家中照顧長輩，依照顧者需求安排每日最短2小時，最長10小時
           </div>
           <p onClick={handleToShow3}>居家喘息</p>
+          <span>Click!</span>
         </div>
       </main>
 

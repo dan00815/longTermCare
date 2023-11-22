@@ -26,7 +26,9 @@
       .ga-1 {
         padding-top: 6rem;
       }
+
       p {
+        position: relative;
         cursor: pointer;
         background-color: rgb(201, 225, 18, 0.5);
         border-radius: 20px;
@@ -35,6 +37,23 @@
         font-size: 1.75rem;
         margin-top: 1rem;
       }
+      span {
+        font-weight: bold;
+        color: lightsalmon;
+        animation: flashEffect 1s ease-in-out 0s infinite alternate;
+        position: relative;
+        top: -4rem;
+        left: 4rem;
+      }
+    }
+  }
+
+  @keyframes flashEffect {
+    from {
+      transform: scale(1) rotate(10deg);
+    }
+    to {
+      transform: scale(1.8) rotate(10deg);
     }
   }
 

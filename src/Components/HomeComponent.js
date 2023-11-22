@@ -153,6 +153,7 @@ const HomeComponent = ({ Images }) => {
         <section className="QA-section">
           <div className="whatIs1">
             <div className="whatIs1-que">什麼是長照？</div>
+            <i className="fa-solid fa-circle-right"></i>
             <div
               className={`whatIs1-ans ${isActiveAns1 ? "active" : ""}`}
               onClick={hanleToActiveAns1}
@@ -181,6 +182,7 @@ const HomeComponent = ({ Images }) => {
               </div>
             </div>
 
+            <i className="fa-solid fa-circle-left"></i>
             <div className="whatIs2-que">為什麼需要長照？</div>
           </div>
         </section>
@@ -357,9 +359,9 @@ const HomeComponent = ({ Images }) => {
             <span>
               <i className="fa-solid fa-right-long"></i>
               <p>
-                按等級和需求給予
+                按等級和需求
                 <br />
-                對應服務
+                給予對應服務
               </p>
             </span>
             <div className="chart-elm">
