@@ -6,6 +6,10 @@
   font-family: "Noto Sans TC", sans-serif;
 }
 
+h1 {
+  text-decoration: none;
+}
+
 nav {
   position: sticky;
   z-index: 99;
@@ -28,6 +32,7 @@ nav {
       }
     }
     p {
+      color: red;
       font-size: 1.75rem;
       margin-left: 1rem;
     }

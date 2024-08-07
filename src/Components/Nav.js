@@ -58,7 +58,9 @@ const Nav = () => {
           <div>
             <img src={HomeMark} alt="首頁圖示"></img>
           </div>
-          <p>長照知多少</p>
+          <h1 style={{ fontSize: "1.75rem", marginLeft: "1rem" }}>
+            長照知多少
+          </h1>
         </div>
 
         <i
